@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>线路选择页面</title>
+  </head>
+  <body>
+    <h2>正在为您选择最优线路</h2>
+    <p>正在选择最佳线路，请稍等...</p>
+
+    <script>
+      // 定义要测试的子域名和优先级
+      const subdomains = [
+        { sub:"主线路", name: "www", priority: 5 },
+        { sub:"主线路2", name: "blog", priority: 4 },
+        { sub:"Github", name: "github", priority: 3 },
+        { sub:"CloudFlare", name: "cloudflare", priority: 2 },
+        { sub:"Zeabur", name: "zeabur", priority: 1 },
+      ];
+
+      // 测试函数，使用XMLHttpRequest来测试连接
+      function testSubdomain(subdomain) {
+        return new Promise((resolve) => {
+          const xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+              // 判断响应状态码是否在200到299之间，表示连接成功
+              const isReachable = xhr.status >= 200 && xhr.status < 300;
+              resolve(isReachable);
+            }
+          };
+          xhr.open("GET", `https://${subdomain}.iuoyt.com`, true); // 修改成实际测试URL
+          xhr.send();
+        });
+      }
+
+      // 主函数，用于测试线路并选择最佳线路
+      async function blogTestMain() {
+        let bestSubdomain = null;
+        let maxPriority = -Infinity;
+
+        for (const subdomain of subdomains) {
+          const tip = "正在测试线路：" +subdomain.sub + "（" +subdomain.name +".iuoyt.com" + "）";
+          document.querySelector("p").innerText = tip;
+          const isReachable = await testSubdomain(subdomain.name);
+          if (isReachable && subdomain.priority > maxPriority) {
+            bestSubdomain = subdomain;
+            maxPriority = subdomain.priority;
+          }
+        }
+
+        if (bestSubdomain) {
+          window.location.href = `https://${bestSubdomain.name}.iuoyt.com`; // 自动重定向到最佳线路
+        } else {
+          // 如果没有找到可访问的线路，可以提供备用方案，比如显示提示信息或提供备用网站地址。
+          document.querySelector("p").innerText = "所有线路都无法访问，请稍后再试或联系管理员！";
+        }
+      }
+      blogTestMain();
+    </script>
+  </body>
+</html>

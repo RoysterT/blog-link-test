@@ -1,0 +1,35 @@
+{
+    "page": {
+        "pageTitle": "Nightyping线路选择",
+        "title": "正在为您选择最优线路，请稍等...",
+        "allLineErrTips": "暂未找到可访问的线路，请刷新重试或联系博客站长！"
+    },
+    "line": {
+        "maxConnectTime": 1000,
+        "numTests": 3,
+        "accessParam": "tp",
+        "line_list":[
+            {
+                "name": "主线路",
+                "sub": "www",
+                "testUrl": "https://www.iuoyt.com"
+            },
+            {
+                "name": "Github",
+                "sub": "github",
+                "testUrl": "https://roystert.github.io"
+            },
+            {
+                "name": "Vercel",
+                "sub": "vercel",
+                "testUrl": "https://vercel.iuoyt.com"
+            },
+            {
+                "name": "CloudFlare",
+                "sub": "cloudflare",
+                "testUrl": "https://cloudflare.iuoyt.com"
+            }
+        ]
+    }
+    
+}

@@ -10,9 +10,14 @@
         "accessParam": "tp",
         "line_list":[
             {
-                "name": "主线路",
-                "sub": "www",
-                "testUrl": "https://www.iuoyt.com"
+                "name": "正在启动测试",
+                "sub": "blog",
+                "testUrl": "https://www.google.com"
+            },
+            {
+                "name": "CloudFlare",
+                "sub": "cloudflare",
+                "testUrl": "https://cloudflare.iuoyt.com"
             },
             {
                 "name": "Github",
@@ -20,14 +25,14 @@
                 "testUrl": "https://roystert.github.io"
             },
             {
+                "name": "主线路",
+                "sub": "www",
+                "testUrl": "https://www.iuoyt.com"
+            },
+            {
                 "name": "Vercel",
                 "sub": "vercel",
                 "testUrl": "https://vercel.iuoyt.com"
-            },
-            {
-                "name": "CloudFlare",
-                "sub": "cloudflare",
-                "testUrl": "https://cloudflare.iuoyt.com"
             }
         ]
     }

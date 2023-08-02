@@ -22,14 +22,14 @@ async function testMain() {
     : "";
 
   let count = 0;
-  const totalLineNum = lines.length;
+  const totalLineNum = lines.length-1;
 
   // 分别测算
   for (const line of lines) {
-    count++;
     const tip =
       "正在测试线路：" + line.name + "(" + count + "/" + totalLineNum + ")";
     console.log(tip);
+    count++;
     const { reachable, maxLatency, avgLatency } = await testSubdomain(
       tip,
       line,
@@ -53,7 +53,7 @@ async function testMain() {
       "检测完成，正在重定向到线路：" + bestLine.name;
     const url = "https://" + bestLine.sub + ".iuoyt.com" + tpUrl;
     console.log("正在重定向到线路：" + bestLine.name + "(" + url + ")");
-    window.location.href = url; // 自动重定向到最佳线路
+    // window.location.href = url; // 自动重定向到最佳线路
   } else {
     // 没有可访问的线路
     document.querySelector("p").innerText = pageConfig.allLineErrTips;

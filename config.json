@@ -5,7 +5,7 @@
         "allLineErrTips": "暂未找到可访问的线路，请刷新重试或联系博客站长！"
     },
     "line": {
-        "maxConnectTime": 1000,
+        "maxConnectTime": 500,
         "numTests": 3,
         "accessParam": "tp",
         "line_list":[
@@ -15,9 +15,9 @@
                 "testUrl": "https://www.google.com"
             },
             {
-                "name": "CloudFlare",
-                "sub": "cloudflare",
-                "testUrl": "https://cloudflare.iuoyt.com"
+                "name": "主线路",
+                "sub": "www",
+                "testUrl": "https://www.iuoyt.com"
             },
             {
                 "name": "Github",
@@ -25,14 +25,14 @@
                 "testUrl": "https://roystert.github.io"
             },
             {
-                "name": "主线路",
-                "sub": "www",
-                "testUrl": "https://www.iuoyt.com"
-            },
-            {
                 "name": "Vercel",
                 "sub": "vercel",
                 "testUrl": "https://vercel.iuoyt.com"
+            },
+            {
+                "name": "CloudFlare",
+                "sub": "cloudflare",
+                "testUrl": "https://cloudflare.iuoyt.com"
             }
         ]
     }

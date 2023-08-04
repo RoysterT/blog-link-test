@@ -33,7 +33,7 @@ async function testMain() {
     const { reachable, maxLatency, avgLatency } = await testSubdomain(
       tip,
       line,
-      maxConnectTime,
+      curMinAvgLatency,
       numTests
     );
     if (reachable & (avgLatency != -1) && avgLatency < curMinAvgLatency) {

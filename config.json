@@ -15,14 +15,14 @@
                 "testUrl": "https://www.google.com"
             },
             {
-                "name": "主线路",
+                "name": "华北",
                 "sub": "www",
-                "testUrl": "https://www.iuoyt.com"
+                "testUrl": "https://www.iuoyt.com.1"
             },
             {
                 "name": "Github",
                 "sub": "github",
-                "testUrl": "https://roystert.github.io"
+                "testUrl": "https://github.iuoyt.com/"
             },
             {
                 "name": "Vercel",

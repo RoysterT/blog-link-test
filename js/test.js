@@ -53,7 +53,7 @@ async function testMain() {
       "检测完成，正在重定向到线路：" + bestLine.name;
     const url = "https://" + bestLine.sub + ".iuoyt.com" + tpUrl;
     console.log("正在重定向到线路：" + bestLine.name + "(" + url + ")");
-    window.location.href = url; // 自动重定向到最佳线路
+    // window.location.href = url; // 自动重定向到最佳线路
   } else {
     // 没有可访问的线路
     document.querySelector("p").innerText = pageConfig.allLineErrTips;

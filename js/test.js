@@ -1,5 +1,3 @@
-
-
 // 主函数
 async function testMain() {
   // 最优线路
@@ -22,7 +20,7 @@ async function testMain() {
     : "";
 
   let count = 0;
-  const totalLineNum = lines.length-1;
+  const totalLineNum = lines.length - 1;
 
   // 分别测算
   for (const line of lines) {
@@ -57,6 +55,25 @@ async function testMain() {
   } else {
     // 没有可访问的线路
     document.querySelector("p").innerText = pageConfig.allLineErrTips;
+
+    // 设置初始倒计时时间（秒）
+    let countdownTime = 3;
+    // 获取显示倒计时的元素
+    const countdownElement = document.getElementById("countdown");
+    // 创建一个函数来更新倒计时并刷新页面
+    function updateCountdown() {
+      countdownTime--;
+      countdownElement.textContent = countdownTime + " 秒后重新刷新";
+      if (countdownTime <= 0) {
+        // 当倒计时结束时，刷新页面
+        window.location.reload();
+      } else {
+        // 继续更新倒计时
+        setTimeout(updateCountdown, 1000); // 每秒更新一次
+      }
+    }
+    // 开始倒计时
+    updateCountdown();
   }
 }
 

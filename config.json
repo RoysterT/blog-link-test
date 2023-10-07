@@ -25,14 +25,19 @@
                 "testUrl": "https://github.iuoyt.com/"
             },
             {
+                "name": "CloudFlare",
+                "sub": "cf",
+                "testUrl": "https://cloudflare.iuoyt.com"
+            },
+            {
                 "name": "Vercel",
                 "sub": "vercel",
                 "testUrl": "https://vercel.iuoyt.com"
             },
             {
-                "name": "CloudFlare",
-                "sub": "cloudflare",
-                "testUrl": "https://cloudflare.iuoyt.com"
+                "name": "Zeabur",
+                "sub": "zeabur",
+                "testUrl": "https://zeabur.app"
             }
         ]
     }

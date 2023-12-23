@@ -51,7 +51,7 @@ async function testMain() {
       "检测完成，正在重定向到线路：" + bestLine.name;
     const url = "https://" + bestLine.sub + ".iuoyt.com" + tpUrl;
     console.log("正在重定向到线路：" + bestLine.name + "(" + url + ")");
-    // window.location.href = url; // 自动重定向到最佳线路
+    window.location.href = url; // 自动重定向到最佳线路
     // 获取显示倒计时的元素
     const countdownElement = document.getElementById("countdown");
     countdownElement.style.opacity = "0";

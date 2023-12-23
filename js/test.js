@@ -51,7 +51,30 @@ async function testMain() {
       "检测完成，正在重定向到线路：" + bestLine.name;
     const url = "https://" + bestLine.sub + ".iuoyt.com" + tpUrl;
     console.log("正在重定向到线路：" + bestLine.name + "(" + url + ")");
-    window.location.href = url; // 自动重定向到最佳线路
+    // window.location.href = url; // 自动重定向到最佳线路
+    // 获取显示倒计时的元素
+    const countdownElement = document.getElementById("countdown");
+    countdownElement.style.opacity = "0";
+    // 2秒钟后未成功定向，显示提示
+    const container = document.getElementById("container");
+    const buttonElement = document.getElementById("button");
+    // 为按钮添加点击事件
+    buttonElement.addEventListener("click", function () {
+      window.location.href = url; // 手动重定向到最佳线路
+    });
+    setTimeout(() => {
+      if (window.location.href != url) {
+        // 显示提示：若未成功定向，点击按钮手动重定向
+        countdownElement.textContent = "未成功定向？点击按钮手动访问";
+        // 显示按钮
+        container.style.height = "210px";
+        // 等待0.3秒后显示按钮
+        setTimeout(() => {
+          buttonElement.style.opacity = "1";
+          countdownElement.style.opacity = "1";
+        }, 100);
+      }
+    }, 1500);
   } else {
     // 没有可访问的线路
     document.querySelector("p").innerText = pageConfig.allLineErrTips;

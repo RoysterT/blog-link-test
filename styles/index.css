@@ -1,0 +1,129 @@
+body {
+    background-color: #f4f4f4;
+    /* 设置页面底色为 #f4f4f4 */
+    font-family: Arial, sans-serif;
+    /* 设置字体 */
+    margin: 0;
+    /* 去除页面默认边距 */
+    padding: 0;
+    /* 去除页面默认内边距 */
+    color: #666;
+    /* 设置页面默认文字颜色为灰色 */
+    font-size: 16px;
+    /* 设置页面默认文字大小为 16px */
+    line-height: 1.5;
+    /* 设置页面默认行高为 1.5 倍 */
+    -webkit-font-smoothing: antialiased;
+    /* 设置字体抗锯齿 */
+    -moz-osx-font-smoothing: grayscale;
+    /* 设置字体抗锯齿 */
+    display: flex;
+    /* 设置页面为弹性布局 */
+    justify-content: center;
+    /* 设置页面水平居中 */
+    align-items: center;
+    /* 设置页面垂直居中 */
+    min-height: 100vh;
+    /* 设置页面最小高度为 100vh */
+    text-align: center;
+    /* 设置页面文字居中 */
+    box-sizing: border-box;
+    /* 设置盒模型为 border-box */
+}
+
+a{
+    text-decoration: none;
+    /* 去除链接下划线 */
+}
+
+.container {
+    min-width: 500px;
+    /* 设置内容区域最小宽度 */
+    max-width: 800px;
+    /* 设置内容区域最大宽度 */
+    min-height: 140px;
+    /* 设置内容区域最小高度 */
+    height: 140px;
+    /* 设置内容区域高度 */
+    margin: 0 auto;
+    /* 居中布局 */
+    padding: 20px;
+    /* 设置内边距 */
+    background-color: #fff;
+    /* 内容区域背景色为白色 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* 添加轻微阴影效果 */
+    border-radius: 14px;
+    /* 设置圆角 */
+    transition: height 0.3s ease;
+    /* 设置过渡效果 */
+    overflow: hidden;
+    /* 隐藏溢出内容 */
+}
+
+h3 {
+    color: #333;
+    /* 设置标题文字颜色为深灰色 */
+    font-size: 24px;
+    /* 设置标题文字大小为 24px */
+    font-weight: bold;
+    /* 设置标题文字加粗 */
+    margin-bottom: 20px;
+    /* 设置标题文字下方外边距为 20px */
+}
+
+#output {
+    color: #666;
+    /* 设置输出文字颜色为灰色 */
+    font-size: 18px;
+    /* 设置输出文字大小为 18px */
+    margin-bottom: 20px;
+    /* 设置输出文字下方外边距为 20px */
+}
+
+#countdown {
+    font-size: 14px;
+    /* 设置倒计时文字大小 */
+    font-weight: bold;
+    /* 设置倒计时文字加粗 */
+    color: #e44d26;
+    /* 设置倒计时文字颜色为橙红色 */
+    margin-bottom: 20px;
+    /* 设置倒计时文字下方外边距为 20px */
+    transition: opacity 0.3s ease;
+    /* 设置过渡效果 */
+}
+
+#button {
+    padding: 10px 20px;
+    /* 设置按钮内边距 */
+    border: 0;
+    /* 去除按钮边框 */
+    border-radius: 4px;
+    /* 设置按钮圆角 */
+    background-color: #e44d26;
+    /* 设置按钮背景色为橙红色 */
+    color: #fff;
+    /* 设置按钮文字颜色为白色 */
+    font-size: 16px;
+    /* 设置按钮文字大小为 16px */
+    font-weight: bold;
+    /* 设置按钮文字加粗 */
+    cursor: pointer;
+    /* 设置鼠标悬停样式为手型 */
+    position: relative;
+    /* 设置按钮为相对定位 */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* 设置按钮水平居中 */
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    /* 设置过渡效果 */
+    opacity: 0;
+    /* 设置按钮透明度为 0 */
+}
+
+#button:hover {
+    background-color: #e56a4a;
+    /* 设置按钮悬停时背景色为橙红色 */
+}

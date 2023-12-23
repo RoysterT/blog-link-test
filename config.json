@@ -1,8 +1,8 @@
 {
     "page": {
         "pageTitle": "Nightyping线路选择",
-        "title": "正在为您选择最优线路，请稍等...",
-        "allLineErrTips": "暂未找到可访问的线路，请刷新重试或联系博客站长！"
+        "title": "即将为您自动选择最优线路，请稍等...",
+        "allLineErrTips": "暂未找到可访问的线路，请再次尝试或联系博客站长！"
     },
     "line": {
         "maxConnectTime": 500,
@@ -15,19 +15,19 @@
                 "testUrl": "https://www.google.com"
             },
             {
-                "name": "华北",
+                "name": "主线",
                 "sub": "www",
-                "testUrl": "https://www.iuoyt.com.1"
-            },
-            {
-                "name": "Github",
-                "sub": "github",
-                "testUrl": "https://github.iuoyt.com/"
+                "testUrl": "https://www.iuoyt.com"
             },
             {
                 "name": "CloudFlare",
                 "sub": "cf",
                 "testUrl": "https://cloudflare.iuoyt.com"
+            },
+            {
+                "name": "Github",
+                "sub": "github",
+                "testUrl": "https://github.iuoyt.com/"
             },
             {
                 "name": "Vercel",
@@ -38,8 +38,12 @@
                 "name": "Zeabur",
                 "sub": "zeabur",
                 "testUrl": "https://zeabur.app"
+            },
+            {
+                "name": "Netlify",
+                "sub": "netlify",
+                "testUrl": "https://netlify.iuoyt.com"
             }
         ]
     }
-    
 }

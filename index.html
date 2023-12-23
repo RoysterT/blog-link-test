@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title id="pageTitle"></title>
-    <script src="./js/readJson.js"></script>
-    <script src="./js/page.js"></script>
-    <script src="./js/test.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title id="pageTitle"></title>
+  <script src="./js/readJson.js"></script>
+  <script src="./js/page.js"></script>
+  <script src="./js/test.js"></script>
+  <script src="./js/night.js"></script>
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+  <div class="container" id="container">
     <h3 id="title"></h3>
     <p id="output">正在测试</p>
+    <button id="button">前往站点</button>
     <div id="countdown"></div>
-  </body>
+  </div>
+  <div
+    style="height:20px; padding:10px; width:100%; backdrop-filter: blur(10px); text-align:center; position: fixed; bottom: 0; background-color: rgba(182, 195, 194, 0.25); z-index: 0">
+    <a target="_blank" href="https://beian.miit.gov.cn/" style="margin-inline:5px" title="域名备案：粤ICP备2021022294号">
+      <img src="https://img.shields.io/badge/粤_ICP_备-2021022294号-008cff">
+    </a>
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502010314"
+      style="margin-inline:5px;" title="公安备案：粤公网安备44030502010314号">
+      <img src="https://img.shields.io/badge/粤公网安备-44030502010314号-ff0000">
+    </a>
+    <a target="_blank" href="https://icp.gov.moe/?keyword=20230807" style="margin-inline:5px"
+      title="本站已加入萌ICP豪华套餐，萌ICP备20230807号">
+      <img src="https://img.shields.io/badge/萌ICP备-20230807-fe1384"
+        data-lazy-src="https://img.shields.io/badge/萌ICP备-20230807-fe1384">
+    </a>
+  </div>
+</body>
 </html>
